@@ -14,7 +14,7 @@ def consultar(conexao):
 
 def inserir(conexao):
     cursor = conexao.cursor()
-    nome_cliente = input('Digite o nome da cliente: ') 
+    nome_cliente = input('Digite o nome do cliente: ') 
     sql_insert = "insert into cliente (nome) values ('"+ nome_cliente +  "')"
     cursor.execute(sql_insert)
     conexao.commit()
@@ -22,7 +22,7 @@ def inserir(conexao):
 def alterar(conexao):
     cursor = conexao.cursor()
     id = input("Digite o ID: ")
-    nome_cliente = input('Digite o nome da cliente: ')
+    nome_cliente = input('Digite o nome do cliente: ')
     sql_update = "update cliente set nome ='" + nome_cliente + "' where id = " + id
     cursor.execute(sql_update) 
     conexao.commit()
